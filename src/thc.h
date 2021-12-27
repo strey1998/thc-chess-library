@@ -21,7 +21,7 @@
  */
 
 #include <stddef.h>
-#include <string>
+#include <cstring>
 #include <vector>
 /****************************************************************************
  * Chessdefs.h Chess classes - Common definitions
@@ -334,7 +334,7 @@ public:
     void Init()
     {
         white = true;
-        strcpy_s( squares, sizeof(squares),
+        strcpy( squares,
            "rnbqkbnr"
            "pppppppp"
            "        "
