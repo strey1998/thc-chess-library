@@ -2,8 +2,8 @@ cmake_minimum_required(VERSION 3.17)
 
 project(thc-chess)
 
-# specify the include directory for the outer project
-set(THC_CHESS_INCLUDE ${PROJECT_SOURCE_DIR}/src PARENT_SCOPE)
+# # specify the include directory for the outer project
+# set(THC_CHESS_INCLUDE ${PROJECT_SOURCE_DIR}/src PARENT_SCOPE)
 # specify a release build
 add_definitions(-DKILL_DEBUG_COMPLETELY -Wno-trigraphs)
 # gather all sources
@@ -13,3 +13,6 @@ list(REMOVE_ITEM THC_CHESS_SRCS ${PROJECT_SOURCE_DIR}/src/thc.cpp ${PROJECT_SOUR
 # define both a static and shared library
 add_library(thc_chess SHARED ${THC_CHESS_SRCS})
 add_library(thc_chess_static STATIC ${THC_CHESS_SRCS})
+
+target_include_directories(thc_chess INTERFACE src)
+target_include_directories(thc_chess_static INTERFACE src)
