@@ -21,13 +21,9 @@
  */
 
 #include <stddef.h>
-<<<<<<< HEAD
-#include <cstring>
-=======
 #include <stdint.h>
 #include <string.h>
 #include <string>
->>>>>>> aa217cb9b4d759cd7c07e11c98526b0187b0a64b
 #include <vector>
 /****************************************************************************
  * Chessdefs.h Chess classes - Common definitions
