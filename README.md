@@ -1,4 +1,4 @@
-# THC Chess Libary
+# THC Chess Library
 
 THC stands for "Triplehappy Chess". Triplehappy is a former company name, and still exists
 as triplehappy.com, a website hosting my chess projects. THC the library is a C++ implementation
@@ -20,12 +20,30 @@ portable C++).
 To illustrate the process, I've introduced the new demonstration program called demo.cpp. This
 is a kind of 'Hello World' program for THC. Just build a program that compiles and links the
 two C++ files demo.cpp and thc.cpp together. I've included a Visual C++ 2017 solution and project
-but really any C++ development system should work fine.
+but really any C++ development system should work fine. More recently I added the simplest possible
+bash build script to build the demo on Linux. (I also updated the Visual C++ project file to 2019,
+this mainly changed the platform toolset from v141 to v142).
 
-The demo.cpp program is simple and self explanatory, and by looking at it and getting it
+
+The demo.cpp program is simple and self-explanatory, and by looking at it and getting it
 going you will see the sort of things you can do with THC. It might be a good idea to keep
 demo.cpp as the main() file in your project (rename it to something else) and then to
 progressively replace it with the functionality you want to build.
+
+
+Rebuild and Test
+================
+
+I should mention that there's now a supplement to the Demo program I described in Getting started.
+It's called RebuildAndTest. You use it to, well, rebuild and test thc.c and thc.h. In this sense
+'rebuild' means to pull the components of thc.c and thc.h together, and 'test' is just some
+rudimentary testing that I should extend, for example with perft (see github.com Issues for the
+repository - the good news is that tch-chess-library does pass this standard test!).
+
+You can still ignore Rebuild and Test if you just want to quickly get started, but this is a good
+place to go if you want to get into the weeds a little further. Just as for the Demo program, there
+are Visual C++ 2019 files for building RebuildAndTest and a rudimentary Linux build script as well.
+This time there are three C++ files to compile and link - test-framework.cpp, thc.cpp and util.cpp.
 
 Background
 ==========
@@ -49,7 +67,7 @@ Features
 THC and other projects/repositories
 ===================================
 
-In December 2020 I (finally) got all my Github chess projects properly aligned.
+In December 2020 I (finally) got all my GitHub chess projects properly aligned.
 
 - THC, a C++ implementation of the rules of chess (this project)
 - Tarrasch Chess GUI, My main project, a chess workbench
@@ -57,7 +75,7 @@ In December 2020 I (finally) got all my Github chess projects properly aligned.
 - Tarrasch Toy Engine, a simple original UCI engine
 
 The idea is that project thc will deliver a simple pair of C++ file thc.cpp and thc.h which
-implement the rules of chess for the other three projects. Finally thc.cpp and thc.h
+implement the rules of chess for the other three projects. Finally, thc.cpp and thc.h
 are the same for all three projects! (at least on December 2nd 2020).
 
 Older Information
